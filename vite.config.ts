@@ -8,10 +8,13 @@ export default defineConfig({
 		react(),
 		eslintPlugin({
 			cache: false,
-			include: ['./src//*.js', './src//*.jsx'],
+			include: ['./src/*.{js,jsx,ts,tsx}'],
 			exclude: [],
 		}),
 	],
+	build: {
+		outDir: 'build',
+	},
 	resolve: {
 		alias: {
 			'@App': path.resolve(__dirname, './src/'),
@@ -20,7 +23,7 @@ export default defineConfig({
 	css: {
 		preprocessorOptions: {
 			scss: {
-				additionalData: `@import "./src/styles/variables.scss";`,
+				additionalData: '@import "./src/styles/variables.scss";',
 			},
 		},
 	},

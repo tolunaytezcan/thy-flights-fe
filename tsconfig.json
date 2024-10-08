@@ -6,7 +6,9 @@
 		},
 		"strict": true,
 		"jsx": "react-jsx",
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"outDir": "./dist",
+		"declaration": false,
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx"],
 	"exclude": ["node_modules"]
