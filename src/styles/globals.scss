@@ -2,14 +2,14 @@
 @import './variables';
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: $black;
-  background-color: $white;
+	font-family: 'Roboto', sans-serif;
+	color: $black;
+	background-color: $white;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
