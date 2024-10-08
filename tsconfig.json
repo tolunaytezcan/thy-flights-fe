@@ -1,7 +1,13 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@App/*": ["src/*"]
+		},
+		"strict": true,
+		"jsx": "react-jsx",
+		"esModuleInterop": true
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx"],
+	"exclude": ["node_modules"]
 }
