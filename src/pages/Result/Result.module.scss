@@ -1,0 +1,60 @@
+.wrapper {
+	background-color: $white;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.info_message_area {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.area_wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.text_and_icon {
+	display: flex;
+	align-items: center;
+	width: 600px;
+	gap: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $grey-lightest;
+}
+
+.text_area {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.successIcon {
+	color: $green;
+	font-size: 1.5rem;
+}
+
+.errorIcon {
+	color: $red;
+	font-size: 1.5rem;
+}
+
+.total_price {
+	font-size: $fs-lg;
+	font-weight: $fw-xlight;
+}
+
+.amount {
+	font-size: $fs-md;
+	font-weight: $fw-light;
+	color: $mid-blue;
+}
+
+.button {
+	background-color: $red;
+	padding: 8px 20px;
+	color: $white;
+	border: none;
+	font-size: $fs-xs;
+}
