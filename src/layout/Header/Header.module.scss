@@ -1,0 +1,12 @@
+.header_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid $grey-light;
+	color: $grey-darkest;
+}
+
+.searchPage {
+	color: $white;
+	border-bottom: 1px solid $white;
+}
