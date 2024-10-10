@@ -127,6 +127,7 @@ describe('CabinOptions', () => {
 				flight={mockFlight}
 				index={0}
 				handleRadioChange={mockHandleRadioChange}
+				promotionalCode={true}
 			/>,
 		);
 
@@ -143,6 +144,7 @@ describe('CabinOptions', () => {
 				flight={mockFlight}
 				index={0}
 				handleRadioChange={mockHandleRadioChange}
+				promotionalCode={true}
 			/>,
 		);
 
