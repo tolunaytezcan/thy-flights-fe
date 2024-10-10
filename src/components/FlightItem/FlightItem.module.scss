@@ -1,0 +1,88 @@
+.flight_box {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding: 10px;
+	border: 1px solid $grey-lightest;
+	font-size: $fs-xs;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.airport_infos {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.lineWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.line {
+	border: none;
+	height: 1px;
+	width: 150px;
+	background-color: $black;
+}
+
+.radio_group {
+	display: flex;
+	gap: 10px;
+}
+
+.campaign_code {
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	gap: 10px;
+}
+
+.promo_message {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: $fs-xs;
+	font-weight: $fw-light;
+}
+
+.subcategory_card_wrapper {
+	padding: 0 10px;
+	background-color: rgba(238, 238, 238, 0.5);
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.subcategory_card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $grey-lightest;
+	flex: 1;
+	min-width: 0;
+	height: 300px;
+}
+
+.title_and_price {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.subcat_rights {
+	padding: 10px;
+	background-color: $white;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border: 1px solid $grey-lightest;
+	height: 100%;
+
+	p {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $grey-lightest;
+	}
+}
