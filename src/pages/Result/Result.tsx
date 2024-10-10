@@ -6,18 +6,15 @@ import {
 	faCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-interface ResultProps {
-	status: 'available' | 'error';
-	amount?: number;
-}
-
-const Result: React.FC<ResultProps> = ({ status, amount = 0 }) => {
+const Result: React.FC = () => {
+	const location = useLocation();
+	const { status, price, passengerCount } = location.state || {};
 	const navigate = useNavigate();
 
 	const goBack = () => {
-		navigate('/search');
+		navigate('/flights');
 	};
 
 	const renderSuccess = () => {
@@ -31,8 +28,14 @@ const Result: React.FC<ResultProps> = ({ status, amount = 0 }) => {
 					<p>Kabin seçiminiz tamamlandı.</p>
 				</div>
 				<div className={styles.text_area}>
+					<p className={styles.total_price}>Kişi sayısı</p>
+					<p className={styles.amount}>{` ${passengerCount}`}</p>
+				</div>
+				<div className={styles.text_area}>
 					<p className={styles.total_price}>Toplam tutar</p>
-					<p className={styles.amount}>{`TRY ${amount}`}</p>
+					<p
+						className={styles.amount}
+					>{` ${price.amount} x ${passengerCount} = ${price.currency}  ${Number(price.amount) * Number(passengerCount)}`}</p>
 				</div>
 			</div>
 		);
