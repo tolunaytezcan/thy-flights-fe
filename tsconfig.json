@@ -9,6 +9,9 @@
 		"esModuleInterop": true,
 		"outDir": "./dist",
 		"declaration": false,
+		"module": "ESNext",
+		"target": "ESNext",
+		"moduleResolution": "bundler"
 	},
 	"include": ["src/**/*.ts", "src/**/*.tsx"],
 	"exclude": ["node_modules"]
