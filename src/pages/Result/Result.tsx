@@ -29,13 +29,13 @@ const Result: React.FC = () => {
 				</div>
 				<div className={styles.text_area}>
 					<p className={styles.total_price}>Kişi sayısı</p>
-					<p className={styles.amount}>{` ${passengerCount}`}</p>
+					<p className={styles.amount}>{` ${passengerCount ?? 1}`}</p>
 				</div>
 				<div className={styles.text_area}>
 					<p className={styles.total_price}>Toplam tutar</p>
 					<p
 						className={styles.amount}
-					>{` ${price.amount} x ${passengerCount} = ${price.currency}  ${Number(price.amount) * Number(passengerCount)}`}</p>
+					>{` ${price.amount} x ${passengerCount ?? 1} = ${price.currency}  ${Number(price.amount) * Number(passengerCount)}`}</p>
 				</div>
 			</div>
 		);
