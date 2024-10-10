@@ -1,0 +1,24 @@
+.popover_information_area {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	width: 400px;
+	height: 200px;
+}
+
+.radio_group {
+	display: flex;
+	gap: 20px;
+}
+
+.passanger_counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.counter_wrapper {
+	display: flex;
+	gap: 5px;
+}

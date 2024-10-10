@@ -6,15 +6,19 @@ import {
 	faCircleXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 
 interface ResultProps {
-	status: 'success' | 'error';
+	status: 'available' | 'error';
 	amount?: number;
 }
 
 const Result: React.FC<ResultProps> = ({ status, amount = 0 }) => {
-	// eslint-disable-next-line no-console
-	console.log(status);
+	const navigate = useNavigate();
+
+	const goBack = () => {
+		navigate('/search');
+	};
 
 	const renderSuccess = () => {
 		return (
@@ -46,7 +50,9 @@ const Result: React.FC<ResultProps> = ({ status, amount = 0 }) => {
 				</div>
 				<div className={styles.text_area}>
 					<span></span>
-					<button className={styles.button}>Başa dön</button>
+					<button onClick={goBack} className={styles.button}>
+						Başa dön
+					</button>
 				</div>
 			</div>
 		);
@@ -56,7 +62,7 @@ const Result: React.FC<ResultProps> = ({ status, amount = 0 }) => {
 		<div className={styles.wrapper}>
 			<Header />
 			<div className={styles.info_message_area}>
-				{status === 'success' ? renderSuccess() : renderError()}
+				{status === 'available' ? renderSuccess() : renderError()}
 			</div>
 		</div>
 	);

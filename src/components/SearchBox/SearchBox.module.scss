@@ -1,0 +1,12 @@
+.search_box_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	height: 100px;
+	background-color: $grey-mid;
+	padding: 20px;
+}
+.date_picker {
+    padding-bottom: 7px;
+}

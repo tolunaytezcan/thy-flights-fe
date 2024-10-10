@@ -1,5 +1,29 @@
 .wrapper {
-	background-color: $white;
+	background-color: $primary;
 	min-height: 100vh;
 	padding: 20px;
+}
+
+.search_area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: $white;
+	font-size: 1rem;
+	height: 50vh;
+}
+
+.hello {
+	font-size: $fs-xl;
+	font-weight: $fw-light;
+}
+
+.explore {
+	font-size: $fs-lg;
+	font-weight: $fw-xlight;
+}
+
+.search_comp {
+	margin-top: 20px;
 }
