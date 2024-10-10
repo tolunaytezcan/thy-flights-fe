@@ -8,7 +8,7 @@ import Header from '@App/layout/Header/Header';
 import SearchBox from '@App/components/SearchBox/SearchBox';
 import { ErrorModal } from '@App/components/ErrorModal/ErrorModal';
 
-import { ICity } from '@App/constants/citites';
+import { ICity } from '@App/constants/cities';
 
 import styles from './FlightSearch.module.scss';
 
