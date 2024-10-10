@@ -52,7 +52,10 @@ const CabinOptions = ({
 							},
 						}}
 					/>
-					<div className={styles.radio_price}>
+					<div
+						data-testid='price-info'
+						className={styles.radio_price}
+					>
 						<span>Yolcu Başına</span>
 						<span className={styles.amount}>
 							TRY

@@ -25,6 +25,7 @@ const FlightListing: React.FC = () => {
 	const [cabinClasses, setCabinClasses] = useState<(string | null)[]>(
 		Array(flights.length).fill(null),
 	);
+
 	const [sortCriteria, setSortCriteria] = useState<string>('lowestPrice');
 
 	const sortedFlights = flights.sort((a: Flight, b: Flight) => {

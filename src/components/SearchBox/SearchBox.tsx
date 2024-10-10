@@ -22,6 +22,8 @@ const SearchBox = ({
 }: SearchBoxProps) => {
 	const renderAutocomplete = (id: string, label: string) => (
 		<Autocomplete
+			id={id}
+			data-testid={id}
 			disablePortal
 			options={cities}
 			sx={{
@@ -75,6 +77,7 @@ const SearchBox = ({
 			</div>
 			<div>
 				<Button
+					data-testid='search-button'
 					variant='contained'
 					type='submit'
 					sx={{
