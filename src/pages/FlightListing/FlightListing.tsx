@@ -96,7 +96,7 @@ const FlightListing: React.FC = () => {
 					</Button>
 					{originCity && destinationCity && (
 						<div className={styles.selected_cities}>
-							<p>{`${originCity} - ${destinationCity}, ${passengerCount} Yolcu`}</p>
+							<p>{`${originCity} - ${destinationCity}, ${passengerCount ?? 1} Yolcu`}</p>
 						</div>
 					)}
 					<div className={styles.campaign_code}>
@@ -111,6 +111,19 @@ const FlightListing: React.FC = () => {
 								label='Promosyon Kodu'
 							/>
 						</FormGroup>
+						{promotionalCode && (
+							<div className={styles.promotional_message_area}>
+								<span>
+									Promosyon Kodu seçeneği ile tüm Economy
+									kabini Eco Fly paketlerini %50 indirimle
+									satın alabilirsiniz!
+								</span>
+								<span>
+									Promosyon Kodu seçeneği aktifken Eco Fly
+									paketi haricinde seçim yapılamamaktadır.
+								</span>
+							</div>
+						)}
 					</div>
 					{
 						<FlightList

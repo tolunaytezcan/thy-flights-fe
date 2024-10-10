@@ -17,22 +17,10 @@
 	gap: 20px;
 }
 
-.list_topbar {
-	background-color: $primary;
+.promotional_message_area {
 	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	flex-direction: column;
 	gap: 20px;
-	padding: 10px;
-}
-
-.search_criteria {
-	color: $white;
+	margin-top: 10px;
 	font-size: $fs-xs;
-}
-
-.flight_info {
-	color: $primary;
-	font-size: $fs-lg;
-	font-weight: $fw-regular;
 }

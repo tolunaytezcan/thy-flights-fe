@@ -66,6 +66,7 @@ const FlightItem = ({
 							flight={flight}
 							index={index}
 							handleRadioChange={handleRadioChange}
+							promotionalCode={promotionalCode}
 						/>
 					</div>
 				</div>

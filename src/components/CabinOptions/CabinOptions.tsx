@@ -13,6 +13,7 @@ interface CabinOptionsProps {
 	cabinClasses: (string | null)[];
 	flight: Flight;
 	index: number;
+	promotionalCode: boolean;
 	handleRadioChange: (
 		index: number,
 		e: React.ChangeEvent<HTMLInputElement>,
@@ -24,6 +25,7 @@ const CabinOptions = ({
 	flight,
 	index,
 	handleRadioChange,
+	promotionalCode,
 }: CabinOptionsProps) => (
 	<FormControl
 		sx={{
@@ -38,34 +40,42 @@ const CabinOptions = ({
 			name={`cabin-${index}`}
 			onChange={e => handleRadioChange(index, e)}
 		>
-			{['ECONOMY', 'BUSINESS'].map(cabin => (
-				<div key={cabin} className={styles.flex}>
-					<FormControlLabel
-						value={cabin.toLowerCase()}
-						control={<Radio />}
-						label={cabin}
-						sx={{
-							'& .MuiFormControlLabel-label': {
-								borderBottom: '1px solid grey',
-								color: 'grey',
-								fontSize: '10px',
-							},
-						}}
-					/>
-					<div
-						data-testid='price-info'
-						className={styles.radio_price}
-					>
-						<span>Yolcu Başına</span>
-						<span className={styles.amount}>
-							TRY
-							{flight.fareCategories[
-								cabin as keyof typeof flight.fareCategories
-							].subcategories[0].price.amount.toString()}
-						</span>
+			{['ECONOMY', 'BUSINESS'].map(cabin => {
+				const lowestPrice =
+					flight.fareCategories[
+						cabin as keyof typeof flight.fareCategories
+					].subcategories[0].price;
+
+				return (
+					<div key={cabin} className={styles.flex}>
+						<FormControlLabel
+							value={cabin.toLowerCase()}
+							control={<Radio />}
+							label={cabin}
+							sx={{
+								'& .MuiFormControlLabel-label': {
+									borderBottom: '1px solid grey',
+									color: 'grey',
+									fontSize: '10px',
+								},
+							}}
+						/>
+						<div
+							data-testid='price-info'
+							className={styles.radio_price}
+						>
+							<span>Yolcu Başına</span>
+							<span className={styles.amount}>
+								{lowestPrice.currency.toString()}
+
+								{promotionalCode
+									? (lowestPrice.amount / 2).toString()
+									: lowestPrice.amount.toString()}
+							</span>
+						</div>
 					</div>
-				</div>
-			))}
+				);
+			})}
 		</RadioGroup>
 	</FormControl>
 );
