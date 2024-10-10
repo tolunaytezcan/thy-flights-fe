@@ -1,11 +1,14 @@
 import React from 'react';
-import Popover from '@mui/material/Popover';
-import Button from '@mui/material/Button';
-import Radio from '@mui/material/Radio';
-import TextField from '@mui/material/TextField';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
+
+import {
+	Button,
+	FormControl,
+	FormControlLabel,
+	Popover,
+	Radio,
+	RadioGroup,
+	TextField,
+} from '@mui/material';
 import ManIcon from '@mui/icons-material/Man';
 import PeopleIcon from '@mui/icons-material/People';
 

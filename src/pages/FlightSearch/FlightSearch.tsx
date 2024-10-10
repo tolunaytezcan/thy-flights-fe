@@ -33,6 +33,12 @@ const FlightSearch: React.FC = () => {
 	const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
+		if (!selectedOriginCity.value || !selectedDestinationCity.value) {
+			setModalMessage('Lütfen uçuş yapılacak olan şehirleri seçiniz');
+			setModalOpen(true);
+			return;
+		}
+ 
 		if (selectedOriginCity.value === selectedDestinationCity.value) {
 			setModalMessage('Aynı şehirler arası uçuş yapılamaz');
 			setModalOpen(true);

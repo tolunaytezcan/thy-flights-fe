@@ -6,6 +6,8 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import FlightLandIcon from '@mui/icons-material/FlightLand';
+import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import PassengerPopover from '@App/components/PassengerPopover/PassengerPopover';
 import styles from './SearchBox.module.scss';
 import { cities, ICity } from '@App/constants/cities';
@@ -28,9 +30,31 @@ const SearchBox = ({
 			options={cities}
 			sx={{
 				width: 200,
-				backgroundColor: 'white',
+				'& .MuiFormLabel-root': {
+					top: '11px',
+					color: '#063048',
+					fontWeight: 'bold',
+					fontSize: '16px',
+				},
+				'& .MuiInputBase-root': {
+					backgroundColor: 'white',
+				},
 			}}
-			renderInput={params => <TextField {...params} label={label} />}
+			renderInput={params => (
+				<TextField
+					{...params}
+					placeholder={label}
+					InputProps={{
+						...params.InputProps,
+						startAdornment:
+							id === 'origin' ? (
+								<FlightLandIcon sx={{ marginRight: 1 }} />
+							) : (
+								<FlightTakeoffIcon sx={{ marginRight: 1 }} />
+							),
+					}}
+				/>
+			)}
 			onChange={(event, value) => {
 				if (id === 'origin') {
 					setSelectedOriginCity(

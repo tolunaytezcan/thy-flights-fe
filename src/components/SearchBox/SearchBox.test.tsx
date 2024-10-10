@@ -21,10 +21,10 @@ describe('SearchBox', () => {
 			/>,
 		);
 
-		expect(screen.getByLabelText(/nereden/i)).toBeInTheDocument();
-		expect(screen.getByLabelText(/nereye/i)).toBeInTheDocument();
+		expect(screen.getByPlaceholderText(/Nereden/i)).toBeInTheDocument();
+		expect(screen.getByPlaceholderText(/Nereye/i)).toBeInTheDocument();
 
-		expect(screen.getByLabelText(/tarih/i)).toBeInTheDocument();
+		expect(screen.getByLabelText(/Tarih/i)).toBeInTheDocument();
 	});
 
 	it('calls setSelectedOriginCity with the selected origin city', () => {
@@ -35,7 +35,7 @@ describe('SearchBox', () => {
 			/>,
 		);
 
-		const originInput = screen.getByLabelText(/nereden/i);
+		const originInput = screen.getByPlaceholderText(/nereden/i);
 		fireEvent.change(originInput, { target: { value: cities[0].label } });
 		fireEvent.click(screen.getByText(cities[0].label));
 
@@ -50,7 +50,7 @@ describe('SearchBox', () => {
 			/>,
 		);
 
-		const destinationInput = screen.getByLabelText(/nereye/i);
+		const destinationInput = screen.getByPlaceholderText(/nereye/i);
 		fireEvent.change(destinationInput, {
 			target: { value: cities[1].label },
 		});
