@@ -35,7 +35,7 @@ const Result: React.FC = () => {
 					<p className={styles.total_price}>Toplam tutar</p>
 					<p
 						className={styles.amount}
-					>{` ${price.amount} x ${passengerCount ?? 1} = ${price.currency}  ${Number(price.amount) * Number(passengerCount)}`}</p>
+					>{` ${price.amount} x ${passengerCount ?? 1} = ${price.currency}  ${Number(price.amount) * Number(passengerCount ?? 1)}`}</p>
 				</div>
 			</div>
 		);
