@@ -29,11 +29,11 @@ interface FareCategories {
 	ECONOMY: FareCategory;
 }
 
-interface FareCategory {
+export interface FareCategory {
 	subcategories: Subcategory[];
 }
 
-interface Subcategory {
+export interface Subcategory {
 	brandCode: string;
 	price: Price;
 	order: number;
@@ -41,7 +41,7 @@ interface Subcategory {
 	rights: string[];
 }
 
-interface Price {
+export interface Price {
 	amount: number;
 	currency: string;
 }

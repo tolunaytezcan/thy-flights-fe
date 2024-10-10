@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PassengerPopover from '@App/components/PassengerPopover/PassengerPopover';
 import styles from './SearchBox.module.scss';
-import { cities, ICity } from '@App/constants/citites';
+import { cities, ICity } from '@App/constants/cities';
 import 'dayjs/locale/en-gb';
 
 interface SearchBoxProps {

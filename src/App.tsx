@@ -13,7 +13,7 @@ const App = () => (
 			<Routes>
 				<Route path='/' element={<FlightSearch />} />
 				<Route path='/flights' element={<FlightListing />} />
-				<Route path='/result' element={<Result status='error' />} />
+				<Route path='/result' element={<Result />} />
 			</Routes>
 		</BrowserRouter>
 	</div>
